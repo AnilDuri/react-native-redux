@@ -6,7 +6,7 @@ import { enableScreens } from 'react-native-screens';
 import MealsNavigator from './navigation/MealsNavigator';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import mealsReducer from './store/actions/reducers/meals';
+import mealsReducer from './store/reducers/mealsReducers';
 
 enableScreens();
 
@@ -22,8 +22,6 @@ const fetchFonts = () => {
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
   })
 }
-
-
 
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
